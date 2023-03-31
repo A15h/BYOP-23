@@ -147,7 +147,7 @@ from tensorflow.keras.optimizers.schedules import PolynomialDecay
 # Define your model architecture here
 
 initial_learning_rate = 5e-5
-decay_steps = 5 * len(x_train) // 36 # decay the learning rate every 5 epochs
+decay_steps = 3 * len(x_train) // 36 # decay the learning rate every 3 epochs
 end_learning_rate = 1e-7
 power = 1.0
 
