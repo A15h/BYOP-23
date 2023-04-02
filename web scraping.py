@@ -12,8 +12,6 @@ for source in news_sources['sources']:
     
 
 
-# In[49]:
-
 
 data = newsapi.get_everything(q='Salman Khan',language='en',)
 print(data)
@@ -24,7 +22,6 @@ print(data)
 print(data['articles'][0])
 
 
-# In[6]:
 
 
 for article in data['articles']:
@@ -33,20 +30,6 @@ for article in data['articles']:
     print('publised at :' ,article['publishedAt'])
     
 
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[10]:
 
 
 def get_data(keyword):
@@ -65,14 +48,10 @@ data = get_data('salman khan')
 data
 
 
-# In[11]:
-
 
 date_time = data[0]["published"]
 date_time
 
-
-# In[12]:
 
 
 import datetime
@@ -82,7 +61,6 @@ DT = parser.parse(date_time)
 print(DT)
 
 
-# In[13]:
 
 
 import pandas as pd
@@ -90,7 +68,6 @@ df = pd.DataFrame(data)
 df
 
 
-# In[73]:
 
 
 get_ipython().system('pip install bs4')
@@ -102,15 +79,12 @@ get_ipython().system('pip install nltk')
 
 
 
-# In[94]:
 
 
 import requests
 import re
 url= 'https://indianexpress.com/article/entertainment/web-series/johnny-lever-and-saurabh-shukla-parody-pathaan-scene-ft-shah-rukh-salman-khan-kapil-sharma-diss-8475319/'
 
-
-# In[95]:
 
 
 #for i in df:
@@ -120,31 +94,6 @@ soup= BeautifulSoup(htmlcontent, 'html.parser')
 soup.prettify
 
 
-# In[25]:
-
-
-
-
-
-# In[26]:
-
-
-
-
-
-# In[27]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[29]:
 
 
 
@@ -171,31 +120,6 @@ import en_core_web_sm
 nlp = en_core_web_sm.load()
 
 
-# In[ ]:
-
-
-
-
-
-# In[70]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[83]:
 
 
 get_ipython().system('pip install -U spacy')
@@ -206,15 +130,6 @@ get_ipython().system('python -m spacy download en_core_web_sm')
 
 
 nlp = spacy.load("en_core_web_sm")
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
 
 
 
